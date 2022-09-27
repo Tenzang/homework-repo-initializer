@@ -1,11 +1,23 @@
 class_info = {
-    class_ID: '',
-    IA_repo_name: '',
-    instructor_name: '',
-    students: ''
+    class_ID: 'SEIC57',
+    IA_github_username: 'Tenzang',
+    instructor_name: 'Joel',
+    students: 'Alex Nicolaidis
+    Brianna Danford
+    Gissell Bustos
+    Isabel Sousa Cruz
+    Jason Luo
+    Jikai Ren
+    Joshua Luo
+    Keshia Wijaya
+    Michael A Anderson
+    Minqian Xu
+    Sophia Pache
+    Talal Hamzeh'
 }
 
-class_info[:students] = class_info[:students].split("\t").join(' ').split("\n")
+# break up students string into array
+class_info[:students] = class_info[:students].split("\n")
 class_info[:students] = class_info[:students].map.with_index{|student, i| (i + 1).to_s.rjust(class_info[:students].size.digits.size, '0') + '-' + student.strip.split(' ').join('-')}
 
 # create root directory
@@ -65,7 +77,7 @@ _'Cloning' takes your 'forked' repository on GitHub and creates a local copy - o
 _Adding an upstream repository links the local repository on your computer to the original repository on Github (i.e. mine, the one from which you created the fork)_
 
 - `cd #{class_info[:class_ID]}-homework`
-- `git remote add upstream https://github.com/#{class_info[:IA_repo_name]}/#{class_info[:class_ID]}-homework.git`
+- `git remote add upstream https://github.com/#{class_info[:IA_github_username]}/#{class_info[:class_ID]}-homework.git`
 - `git pull upstream main`
 
 ### Do your homework
