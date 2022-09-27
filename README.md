@@ -11,3 +11,5 @@ This is a ruby script that generates homework directories.
 `rm homework-init.rb`
 
 This will generate a homework directory in the directory that the `homework-init.rb` file is located.
+
+#### **NOTE**: *The README file generated will reference a github repo with the following name format `[class_ID]-homework` where [class_ID] is the value assigned to the corresponding hash in your `homework-init.rb` file.*
